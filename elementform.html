@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element_form</title>
+    <style>
+         body{
+            background-color:aquamarine;
+            font-size: 12px;
+        }
+        form{
+            background-color:darkcyan;
+            padding:50px;
+            margin: 90px 50px;
+        }
+        label{
+            color:rgb(102, 8, 8);
+        }
+        label1{
+            color: rgb(8, 8, 94);
+        }
+        select{
+            background-color:rgb(89, 8, 89);
+            color: wheat;
+        }
+        input{
+            background-color:pink;
+            color:rgb(63, 61, 61);
+        }
+        textarea{
+            background-color: rgb(192, 228, 119);
+            color: crimson;
+        }
+        .button{
+            background-color:darkgreen;
+            height:40px;
+            color:whitesmoke;
+            text-transform:uppercase;
+            font-size:large;
+            border:2px solid rgb(97, 241, 97);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+        <h1><u><i>TRAVEL  FORM FOR OUR TRIP</i></u></h1>
+        <form action="form.php">
+            <input type ="text "placeholder="Enter your name"><br></br>
+            <!--Section id means unique 
+            suppose Roll no. 
+            only one student will remain on this position and no more-->
+            <label for="Section a">
+             <h2><input type="radio"value="Section a" name="section"id="section id a">section a</h2>
+            </label>
+            <label for="section id b">
+                <h2><input type="radio"value="Section b" name="section"id="section id b">section b</h2>
+            </label>
+            <label for="section id c">
+                <!-- class means  school house name
+                every student get there own house-->
+                <h2><input type="radio"value="Section c" name="section"id="section id c" class="red blue">section c</h2>
+            </label>
+            <h3>
+             <input type="checkbox" id="foodcanteen"class="red"name="canteen">
+            <label1 for="food canteen card">want food canteen card</label1></h3><br>
+            <textarea name="explain"id="explain" cols="30" rows="10" placeholder="Explain why you want to join"></textarea>
+            <br></br>
+            <select name="food"id="food">
+                <option value="no of food items"> select the food item that you want</option>
+                <option value="bihari">bihari</option>
+                <option value="marathi">marathi</option>
+                <option value="rajasthani">rajasthani</option>
+                <option value="punjabi">punjabi</option>
+                <option value="kashmiri">kashmiri</option>
+                <option value="bengali">bengali</option>
+                <option value="gujarati">gujarati</option>
+            </select>
+            <br></br>
+            <input type="submit" value="submit"class="button">
+        </form>
+    </div>
+</body>
+</html>
