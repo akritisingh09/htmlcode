@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@500&family=Great+Vibes&family=Merriweather:ital,wght@1,900&family=Playfair:ital,wght@1,900&family=Prata&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Cinzel', serif;
+        font-family: 'Cinzel Decorative', cursive;
+        font-family: 'Great Vibes', cursive;
+        font-family: 'Merriweather', serif;
+        font-family: 'Playfair', serif;
+        font-family: 'Prata', serif;
+    }
+
+    .college {
+        min-height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        background-color: darkgrey;
+        flex: 2;
+        text-align:right;
+    }
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        position: relative;
+        padding: 1%;
+    }
+
+    .nav-links ul li::after {
+        content: ' ';
+        width: 0%;
+        height: 2px;
+        background: #f44336;
+        display: block;
+        margin: auto;
+        transition: 0.5S;
+    }
+
+    .nav-links ul li:hover::after {
+        width: 100%;
+    }
+
+    .text-box {
+        width: 100%;
+        background-color: bisque;
+        color: rgb(148, 14, 148);
+        text-align: center;
+    }
+
+    .button {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        border: 1px solid red;
+        padding: 12px 34px;
+        font-size: 13px;
+        background-color: rgb(248, 177, 248);
+        position: relative;
+    }
+
+    .button:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 1s;
+    }
+
+    .course {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    p {
+        color: blueviolet;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+    }
+
+    .row {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .course-col {
+        flex-basis: 31%;
+        background-color: lightpink;
+        border-radius: 20px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+
+    course-col:hover {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0, 2);
+    }
+
+    .campus {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .campus-col img {
+        width: 40%;
+        padding: 4%;
+        border-radius: 20%;
+    }
+
+    .Facilities {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+
+    }
+
+    .Facilities-col {
+        flex-basis: 31%;
+        border-radius: 5%;
+        margin-bottom: 5%;
+        text-align: left;
+
+    }
+
+    .Facilities-col img {
+        width: 38em;
+        padding: 2%;
+        border-radius: 20%;
+
+    }
+
+    .Facilities-col p {
+        padding: 0;
+    }
+
+    .Facilities-col h3 {
+        margin-top: 16px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .footer {
+        text-align: center;
+        background-color: black;
+        color: white;
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .footer p {
+        color: white;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        padding: 10px;
+
+
+    }
+
+    .row {
+        margin: 0px 2px 2px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-col {
+        flex-basis: 31%;
+        padding: 20px 12px;
+    }
+
+    .footer h4 {
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .footer img {
+        width: 460px;
+        height: 190px;
+    }
+
+    .events {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .events-col img {
+        width: 33%;
+        padding: 2%;
+        border-radius: 29%;
+    }
+    .education img{
+        float: left;
+        border-radius: 50%;
+        
+    }
+    .history{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        
+    }
+    
+    
+    .history img{
+        width:33%;
+        padding: 2%;
+        border-radius: 29%;
+        float:center;
+    }
+  
+    .placement{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .placement img{
+        width: 40%;
+        margin: auto;
+        border-radius: 19%;
+        float: center;
+    }
+    .process{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .process img{
+        width: 40%;
+        padding: 3%;
+        border-radius: 19%;
+        float: center;
+
+    }
+
+
+
+
+
+    @media(max-width:700px) {
+        .text-box {
+            font-size: 20px;
+        }
+
+        .nav-links ul li {
+            display: block;
+        }
+
+        .nav-links {
+            position: absolute;
+            background: #f44336;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: 0;
+            text-align: left;
+            z-index: 2;
+        }
+
+        .nav-links ul {
+            padding: 30px;
+            margin: 10px;
+        }
+
+        .course {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        p {
+            color: blueviolet;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .course-col {
+            flex-basis: 31%;
+            background-color: lightpink;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .Facilities {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .Facilities-col {
+            flex-basis: 31%;
+            border-radius: 5%;
+            margin-bottom: 5%;
+            text-align: left;
+
+        }
+
+        .Facilities-col img {
+            width: 19em;
+            padding: 2%;
+            border-radius: 20%;
+
+        }
+
+        .Facilities-col p {
+            padding: 0;
+        }
+
+        .Facilities-col h3 {
+            margin-top: 16px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+
+        course-col:hover {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0, 2);
+        }
+
+
+
+        @media(max-width:700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        .campus {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50%;
+        }
+
+        .campus-col img {
+            width: 100%;
+            padding: 5%;
+            border-radius: 15%;
+        }
+
+    }
+</style>
+
+<body>
+   
+    <section class="header">
+       
+        <nav>
+            <div class="nav-links">
+
+                <ul>
+                    <div class="education">
+                    <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX20373223.jpg" width="100px" height="100px"></div>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">COURSE</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+
+    </section>
+    
+    <div class="text-box">
+        <h1>World's Biggest University</h1>
+        <p>All ranked institutions have an overall score and 4 pillar scores. However for each pillar, only institutions
+            ranked in the top 500 overall or the top 500 in this pillar have a publicly visible score</p>
+        <a href="" class="button">Visit Us To Know More</a>
+    </div>
+   
+    <img src="https://cdn.slidesharecdn.com/ss_thumbnails/banasthalividyapithppt-221222051000-418170c0-thumbnail.jpg?width=640&height=640&fit=bounds"
+        class="college">
+    </section>
+    <div class="history">
+       
+        <h2>History of Banasthali Vidyapith</h2>
+        <p>To realize a dream which he had cherished since his boyhood, Pandit Hiralal Shastri,  the founding father of Banasthali Vidyapith, resigned his prestigious post of Secretary in the Home and Foreign Department in the erstwhile Jaipur State in 1927 and selected the remote village of Banthali (as Banasthali was originally called) as the centre of his life’s work. His plan was to organize a programme of rural reconstruction on the lines laid down by Gandhiji and also to train public workers through constructive service of the people.
+            While so engaged in his work Shastriji also wanted to train his promising daughter Shantabai as a social worker dedicated to the cause of women’s upliftment. But destiny ordained otherwise. All of a sudden, after a brief illness of a day, Shantabai bade farewell to Banasthali on 25th April, 1935 at the tender age of only 12 years. The loss seemed irreparable at the moment, but soon the mood of despondency gave way to a new hope. If one Shantabai had departed there were others who could be trained likewise. This idea gave solace and opened the path of action.
+             
+            To complete the unfinished task of his daughter, the Shri Shantabai Shiksha Kutir was started in October 1935 in the mud huts provided by the Jiwan Kutir, with about half-a-dozen girls.
+            
+            The name ‘Banasthali Vidyapith’ was adopted only in 1943. This also happened to be the year when undergraduate courses were first introduced. The institution was granted the status of a deemed university in 1983 by the UGC. Prof. Sushila Vyas , the first student of Banasthali Vidyapith  was appointed the first Director of Vidyapith. The UGC committee which recommended the conferment of University status on the institution kept the following points in mind: (i) Vidyapith’s definite and viable programme for restructuring courses at the undergraduate level and its eagerness to carry out various measures to make education more meaningful and practical, (ii) availability of  opportunities to the students to develop their personalities, and (iii) Vidyapith’s initiative to inculcate spiritual and moral values in the students through various activities, emphasizing character-building and simplicity. With its autonomous status, the institute could now experiment, innovate and formulate its own curriculum and other activities.
+            
+            Under the tutelage of the Shastri family, Banasthali Vidyapith has grown from a school catering to only 6 students to the only residential women institute in the country that provides education to girls from the pre-primary stage up to the Doctoral level ( Date-Line of growth of Banasthali Vidyapith )  Banasthali Vidyapith has been accredited by National Assessment and Accreditation Council (NAAC) with ‘A’ Grade (Five star Rating). 
+            </p>
+            <br>
+          
+           <h2>Our SOURCE OF INSPIRATION</h2>
+           <p>1..Shanta Bai</p>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQfmZKFIEefyTRx94hEPwITs5WYgdEG4lIMg&usqp=CAU">
+           <h2>OUR FOUNDERS</h2>
+           <p>1..Shri. Hiralal Shastri</p>
+           <img src="https://images.hindi.news18.com/ibnkhabar/uploads/2018/11/heeralal-shastri.jpg">
+           <p>2..Smt. Ratan Shastri</p>
+           <img src="https://static.toiimg.com/photo/msid-93553153/93553153.jpg">
+           <h3>Vice Chancellor of Banasthali Vidyapith</h3>
+           <img src="https://pbs.twimg.com/media/E2K3U2dVUAAOO5y.jpg">
+           <div></div>
+           <img src="https://media.licdn.com/dms/image/C4D22AQGQIHuyFcp_CA/feedshare-shrink_800/0/1669524697558?e=1687392000&v=beta&t=m50diiKPXVQlT3LKdyl4-fsqjetn8MpQz2RPgA7PvQ8">
+          
+    </div>
+    <section class="course">
+        <h1>Course we offer</h1>
+        <p>Academic programmes</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>School Education</h3>
+                <p>Banasthali Vidyapith provides school education from elementary to senior secondary. At the senior
+                    secondary level, student can opt for Science, Commerce or Humanities as their stream.</p>
+            </div>
+            <div class="course-col">
+                <h3>Undergraduate programs</h3>
+                <p>The university offers 18 undergraduate programs in the disciplines of Mathematics, Science,
+                    Management, Commerce, Arts, Engineering, Aviation, Education, Design, Law, and Journalism. All the
+                    programs are of three years duration except for the Bachelor of Education (B.Ed) which is of 2
+                    years, BA LLB which is of 5 years and the Bachelor of Technology (B.Tech) which is of 4 years.</p>
+            </div>
+            <div class="course-col">
+                <h3>Postgraduate Programs</h3>
+                <p>The university offers 61 masters programs and 32 Doctorates in the disciplines of Humanities, Social
+                    Sciences, Sciences, Law, Education, Commerce and Management.</p>
+            </div>
+    </section>
+    <section class="campus">
+        <h1>Our Banasthali Vidyapith Campus</h1>
+        <p>The campus is a sprawling 850 acres, located about 80 kilometres from the capital city of Jaipur, in the Tonk
+            district of Rajasthan, India.[2] The campus has been broadly divided into the school division, the
+            University division and the residential blocks. The residential blocks feature 29 hostels each with the
+            capacity of housing up to 438 students.</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="https://hindi.cdn.zeenews.com/hindi/sites/default/files/2023/04/02/1700377-bans.jpg">
+                <img
+                    src="https://1.bp.blogspot.com/-F50P8gJ8rcA/XqFV6nuzQRI/AAAAAAAAAp8/Wwd5Lwx5M9ULBfl1VPgjG0p2y0wafoRXgCLcBGAsYHQ/s640/banasthalibanner.jpg">
+                <img src="https://i.ytimg.com/vi/Y8-tV5cBB9g/maxresdefault.jpg">
+                <img src="https://i.ytimg.com/vi/YYE6Nm-84RU/maxresdefault.jpg">
+                <img src="https://i.ytimg.com/vi/cpkAlglC-LM/maxresdefault.jpg">
+                <img
+                    src="https://i.ytimg.com/vi/O7gStJMZ9xM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAtplc73ny6GTsdr6yqSq7k88gr3A">
+            </div>
+    </section>
+    <section class="events">
+        <h1>Events celebrate</h1>
+
+        <p>
+            Each department has its own fest. Though the fest doesn't have celebrities but they have cultural night
+            which has its own aura..Apaji Mela organised in November and it is the largest and most enjoyable fest of
+            the year in banasthali Mayukh'23 is an annual technical fest of Banasthali Vidyapith, Rajasthan to be organised on the 1st, 2nd and 3rd of April 2023. The national-level fest will be organized by the Faculty of Mathematics and Computing, School of Physical Sciences, School of Automation and Department of Artificial Intelligence. The fest is a unique rostrum form where one can reach the acme of the world. It's a place where technical skills, creativity, personality, imagination all combine with the pinch of fun.
+
+        </p>
+
+        <div class="row">
+            <div class="events-col">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXAVxbWOnIrPRLACsie5Q80QJWrqvwOyIqoquuuFcb9a1DISm0QYlBUALRMM0hqD4pznU&usqp=CAU">
+                    <img src="https://i.ytimg.com/vi/lZUrWh3x1xk/hqdefault.jpg">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROSxKnzh1LgsoVXzN1eCT9Xc6xH81bla7mlA&usqp=CAU">
+                    <img src="https://pbs.twimg.com/media/D1SGxiDW0AE8lj4?format=jpg&name=4096x4096">
+
+                <img src="https://cdn.openpr.com/S/8/S829334045_g.jpg">
+                <img src=" https://i.ytimg.com/vi/7QGboL7j2ng/maxresdefault.jpg">
+                <img src="https://i.ytimg.com/vi/9MxNbhxvB-I/maxresdefault.jpg">
+                <img src="https://i.ytimg.com/vi/gmeZktqR0Sk/maxresdefault.jpg">
+
+                <img src="https://cdn.openpr.com/R/b/Rb29621451_g.jpg">
+                <img src="https://i.ytimg.com/vi/MPthgrBF0M8/maxresdefault.jpg">
+                <img src="https://i.ytimg.com/vi/qybeigbIpBs/maxresdefault.jpg">
+                <img src="https://cdn.openpr.com/R/a/Ra2245794_g.jpg">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRguVz_gtuPTYkEmyTui2ZzRIvyDacrOXT4g&usqp=CAU">
+                <img src="https://i.ytimg.com/vi/TZn6sMpDTJ8/hqdefault.jpg">
+
+                <img
+                    src="http://www.banasthali.org/banasthali/wcms/en/home/photogallery/events/Pared.avsFiles/Photo/pic56.jpg">
+
+                <img src="https://i.ytimg.com/vi/GnJvfLh9B4A/sddefault.jpg">
+                <img src="https://cdn.openpr.com/S/8/S826322915_g.jpg">
+
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWu-jfouliVFMP74LVretq7aPwaxfGF_eEla6Ye1UNqnm1l4KbwFqJocarFHqvkMAagzs&usqp=CAU">
+            </div>
+        </div>
+    </section>
+    <section class="Facilities">
+
+        <h1>Our Facilities in Banasthali Vidyapith</h1>
+        <u>
+            <h3>1:Library
+        </u></h3>
+        <p>The library contributes to the development of collections and the creation of technologies to aid research
+            and learning.</p>
+        <div class="row">
+            <div class="Facilities-col">
+                <img src="https://mba.ind.in/img/c/Library-Banasthali-University.jpg">
+            </div>
+        </div>
+        <u>
+            <h3>2:Hostel</h3>
+        </u>
+        <p>Every hostel has up to 5 wardens to look after the students and their needs. Each room in hostel contains a
+            bed, a table and a chair and an almirah. Also they provide you with mattress and pillow.</p>
+        <div class="row">
+            <div class="Facilities-col">
+                <img src="https://i.ytimg.com/vi/vlIa7eW1-LU/maxresdefault.jpg">
+            </div>
+        </div>
+        <u>
+            <h3>3:Airstrip</h3>
+        </u>
+        <p>There is a 50,191,418-square-foot licenced airstrip. The Banasthali Vidyapith has a glider and flying
+            training area of about 100 metres BVGFC (Banasthali Vidyapith Gliding and Flying Club) is a regular flying
+            club that began in 2009.</p>
+        <div class="row">
+            <div class="Facilities-col">
+                <img
+                    src="https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/03/10/Photos/Processed/womenpilots-k0S--621x414@LiveMint.jpg">
+            </div>
+        </div>
+        <u>
+            <h3>4:Transport</h3>
+        </u>
+        <p>Minibuses run at 15-minute intervals as a shuttle service. Bus service is also available to the
+            Banasthali-Newai Railway Station, 7 kilometres from the campus. From 6 am to 6 pm, the Rajasthan Roadways
+            operates a regular to and fro bus service between Jaipur and the university through Newai.</p>
+        <div class="row">
+            <div class="Facilities-col">
+                <img src="https://i.ytimg.com/vi/egxgWif33yQ/sddefault.jpg">
+            </div>
+        </div>
+        <u>
+            <h3>5:Horse Riding</h3>
+        </u>
+        <p>Horse Riding is a regular activity for the students in the campus. It is taught to all the interested
+            students in the Vidyapith. Our riders participate in National Equestrain Competitions also. The riders of
+            Banasthali have had been the silver medalists in 50 k.m. international endurance run competition.</p>
+        <div class="row">
+            <div class="Facilities-col">
+                <img
+                    src="https://images.collegedunia.com/public/college_data/images/campusimage/1649159534275549081_4683380665101446_1987259981395767583_n.jpg">
+            </div>
+        </div>
+        <u>
+            <h3>6:Five Fold Activity</h3>
+        </u>
+        <p>The main thrust of all the activities of the Banasthali University is the development of a complete
+            personality. The institution firmly believes that the personality consists of interdependent components,
+            each being equally important requiring equal attention</p>
+        <div class="row">
+            <div class="Facilities-col">
+                <img src="https://i.ytimg.com/vi/L35Hhb1EmaQ/maxresdefault.jpg">
+                <img src="https://i.ytimg.com/vi/0FPH_sOsPQM/maxresdefault.jpg">
+               
+    </section>
+    <div class="placement">
+        <div class="row"></div>
+        <h2>Banasthali Vidyapith Placement</h2>
+        <img src="https://images.shiksha.com/mediadata/images/articles/1673260344phpi84lFN.jpeg">
+        <img src="https://www.getmyuni.com/assets/images/main/college/content/1abvkolv69ir4-593ln-ep866.webp">
+        <h3>Our Eminent Recruiters</h3>
+        <p>Our students have proven their grit in whichever organization they have been placed with. The students have been well accepted and appreciated because of the values & ethics they carry to the workplace. Shri Rahul Bajaj, Chairman Emeritus of Bajaj Group once mentioned that one of the key attributes that they look for in a candidate is ethics & integrity. He believes that the other skills can be imparted through training. And that's what Banasthali students are known for wherever they have worked across the world. Banasthali Vidyapith focuses on building individual character with strong work ethics & integrity.</p>        
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2s16hFZrYtnGtRnPd1T-Bgd9-kYaKoTBe11zNlI45YZ4-QLmh_IGuNyzBrKNgwcimFyg&usqp=CAU">
+        <h3>Internships </h3>
+        <p>
+            Before their final placements, all students go through 6 months of internship which gives them the opportunity to learn hands-on, the intricacies of the corporate world. Our students get the opportunity to work with the best in the industry. Here is a glimpse of some of such organizations.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8IXKC_Zv7DbTcYFy2IubtMTJVoQoybLreyVS6k7Pgac-jDFmU0mKICaBniPr7ir1y4I&usqp=CAU">
+        </div>
+    </section>
+    <div class="process">
+    <div class="row"></div>
+    <h2>Placement Process</h2>
+    <p>The Placement Process begins with the extension of the formal invitation from the Industry Interaction Cell (IIC) to the organizations, which in turn share the job description and other details back with the IIC. Nominations from interested students are collected and shared with the organisations. Subsequently, a usual process of campus hiring is followed wherein the shortlisted students undergo the following steps: discussion during pre-hiring talk, test, rounds of interview, offer, acceptance & joining.</p>
+    <img src="data:image/jpeg;base64,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" jsaction="VQAsE" class="r48jcc pT0Scc" alt="Placements - Welcome to Banasthali Vidyapith" jsname="JuXqh" style="max-width: 947px; width: 
+    465px; height: 203px; margin: 5px 0px;" data-iml="2296.399999976158">
+</div>
+    
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Banasthali is one of the five higher education institute in India meant exclusively for Women. Over these
+            seventy five years Banasthali has developed into a National Centre for women's education. Banasthali's
+            educational programme aims at an all-round development of the student's personality.</p>
+
+        <img id="details-enlarged-image" class="js-search-result-thumbnail responsive-img container--focus"
+            src="https://as2.ftcdn.net/v2/jpg/05/21/05/57/1000_F_521055732_2WV8sJ2DX8beYQ08CACr6zep2Q4X9MB2.jpg"
+            alt="Social media app icon set" itemprop="thumbnail" data-content-id="521055732">
+        <br></br>
+
+        <h4>Contact Us</h4>
+
+        <div class="row">
+            <div class="footer-col">
+
+                <p>Address</p>
+                <img
+                    src="https://spng.pngfind.com/pngs/s/247-2474784_regional-experiences-location-clip-art-png-transparent-png.png">
+
+                <p> Location:-Banasthali Vidyapith is a university located in the Tonk district of the Rajasthan state
+                    in IndiaVanasthali
+                    Rd, Aliyabad, Rajasthan 304022
+                    Postal Address:
+
+                    Banasthali Vidyapith,
+                    P.O. Banasthali Vidyapith-304022 (Rajasthan)
+                </p>
+            </div>
+            <div class="row">
+                <div class="footer-col">
+                    <p>Phone</p>
+                    <img
+                        src="https://png.pngtree.com/element_our/20190528/ourmid/pngtree-blue-phone-icon-design-image_1163936.jpg">
+                    <p>Admission Enquiry:-
+                        Phone: 01438-228384, 228990
+                        Mobile: +91- 93528 79844, 93528 79855, 93528 79866
+                        Admission Helpline No: 08048766655
+                        Toll Free No: 1800-270-5855</p>
+                </div>
+                <div class="row">
+                    <div class="footer-col">
+                        <p>Email</p>
+                        <img
+                            src="https://www.clipartmax.com/png/small/98-981805_mail-icon-icon-sign-symbol-png-and-vector-email-icon.png">
+                        <p> E-Mail:
+                            Higher Education:- admissions@banasthali.in
+                            School Education:-
+                            (a) For IX & XI :- shardamandir@banasthali.in
+                            (b) For VI :- saraswatimandir@banasthali.in </p>
+                    </div>
+                   
+                   
+                    </div>
+    </section>
+</body>
+
+</html>
