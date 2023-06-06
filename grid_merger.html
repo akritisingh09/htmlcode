@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid merger</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            color: rgb(154, 200, 241);
+            text-shadow: 1px 1px 2px lawngreen, 1px 1px 2px red;
+        }
+
+        .item {
+            background-color: olive;
+            height: 200px;
+           /* width:200px;*/
+            border: 1px solid black;
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            gap: 10px 5px;
+            /* justify-content: flex-end;*/
+        }
+    </style>
+
+<div class="container">
+    <div class="item" style="grid-column: 1/4;">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+</div>
+</body>
+</html>
