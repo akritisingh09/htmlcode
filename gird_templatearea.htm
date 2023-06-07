@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid template area</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: "header header header"
+                "aside section section"
+                "footer footer footer";
+                /*"aside footer footer"*/
+
+            grid-template-rows: 50px 400px 100px 50px;
+        }
+
+        .item1 {
+            grid-area: header;
+            background-color: darkgreen;
+        }
+
+        .item2 {
+            grid-area: aside;
+            background-color: darkolivegreen;
+        }
+
+        .item3 {
+            grid-area: section;
+            background-color: darkcyan;
+        }
+
+        .item4 {
+            grid-area: footer;
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">Header</div>
+        <div class="item2">Aside</div>
+        <div class="item3">Section</div>
+        <div class="item4">Footer</div>
+
+    </div>
+    <br>
+    <img
+        src="https://res.cloudinary.com/practicaldev/image/fetch/s--KZ_olo4R--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2ysa18v4r1mu3evmtiui.png">
+</body>
+
+</html>
