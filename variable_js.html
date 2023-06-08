@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=sc>, initial-scale=1.0">
+    <title>LET,VAR,CONST</title>
+</head>
+
+<body>
+    <script>
+        /*var*/
+        /*GLOBAL SCOPE*/
+        var a = 10;
+        {
+            console.log(a);
+        }
+        /*HOSTING*/
+        x = 8;
+        console.log(x);
+        var x;
+        /*REASSIGN THE VALUE*/
+        var v1 = 1;
+        v1 = 30;
+        console.log(v1);
+        /*REDECLARATION OF THE VARIABLE*/
+        var v2 = 1;
+        v2 = 30;
+        console.log(v2);
+        /*Let*/
+        /*BLOCK SCPE*/
+        let i = 3;
+        {
+            console.log(i);
+        }
+        console.log(i);
+        {
+            let i = 9;
+            console.log(i);
+        }
+        /*NOT WORKING because outside the block scope
+        console.log(i);*/
+        /*HOSTING NOT ALLOWED
+        X3 = 8
+        console.log(x3);
+        let x3;*/
+        /*REASSIGN THE VALUE*/
+        let v3 = 1;
+        v3 = 30;
+        console.log(v3);
+        /*REDECLARATION OF THE VARIABLE NOT ALLOWED
+        let B1 = 1;
+        let B1 = 30;
+        console.log(B1);*/
+        /*const*/
+        {
+            const x1 = 2;
+            console.log(x1);
+        }
+        console.log(x1);
+        /*NOT WORKING
+        const x2 = 3;
+        {
+            console.log(x2);
+        }
+        console.log(x2)*/
+        /*HOSTING* NOT ALLOWED
+        X5=8;
+        console.log(x5);
+        const x5;*/
+        /*REASSIGN THE VALUE NOT ALLOWED
+        const v8=1;
+        v8=30;
+        console.logf(v8);*/
+        /*REDECLARATION OF THE VARIABLE NOT ALLOWED
+        const v10=1;
+        const v10=30;
+        console.log(v10);*/
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
